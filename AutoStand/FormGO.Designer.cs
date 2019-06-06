@@ -43,6 +43,12 @@
             this.textBoxDescricao = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dateTimePickerSaida = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerEntrada = new System.Windows.Forms.DateTimePicker();
+            this.labeldataentrada = new System.Windows.Forms.Label();
+            this.labeldatasaida = new System.Windows.Forms.Label();
+            this.comboBoxtipo = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.listBoxServicos = new System.Windows.Forms.ListBox();
             this.buttonRemoverServicos = new System.Windows.Forms.Button();
             this.buttonAdicionarServico = new System.Windows.Forms.Button();
@@ -67,12 +73,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonRemoverClientes = new System.Windows.Forms.Button();
             this.listBoxClientes = new System.Windows.Forms.ListBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.comboBoxtipo = new System.Windows.Forms.ComboBox();
-            this.labeldatasaida = new System.Windows.Forms.Label();
-            this.labeldataentrada = new System.Windows.Forms.Label();
-            this.dateTimePickerEntrada = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerSaida = new System.Windows.Forms.DateTimePicker();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -169,6 +169,7 @@
             this.listBoxParcelas.Name = "listBoxParcelas";
             this.listBoxParcelas.Size = new System.Drawing.Size(244, 134);
             this.listBoxParcelas.TabIndex = 16;
+            this.listBoxParcelas.SelectedIndexChanged += new System.EventHandler(this.listBoxParcelas_SelectedIndexChanged);
             // 
             // textBoxValor
             // 
@@ -194,6 +195,7 @@
             this.buttonAdicionarParcela.TabIndex = 12;
             this.buttonAdicionarParcela.Text = "Adicionar Parcela";
             this.buttonAdicionarParcela.UseVisualStyleBackColor = true;
+            this.buttonAdicionarParcela.Click += new System.EventHandler(this.buttonAdicionarParcela_Click);
             // 
             // textBoxDescricao
             // 
@@ -230,6 +232,63 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Serviços";
             // 
+            // dateTimePickerSaida
+            // 
+            this.dateTimePickerSaida.Location = new System.Drawing.Point(10, 306);
+            this.dateTimePickerSaida.Name = "dateTimePickerSaida";
+            this.dateTimePickerSaida.Size = new System.Drawing.Size(146, 20);
+            this.dateTimePickerSaida.TabIndex = 32;
+            // 
+            // dateTimePickerEntrada
+            // 
+            this.dateTimePickerEntrada.Location = new System.Drawing.Point(10, 268);
+            this.dateTimePickerEntrada.Name = "dateTimePickerEntrada";
+            this.dateTimePickerEntrada.Size = new System.Drawing.Size(146, 20);
+            this.dateTimePickerEntrada.TabIndex = 31;
+            // 
+            // labeldataentrada
+            // 
+            this.labeldataentrada.AutoSize = true;
+            this.labeldataentrada.Location = new System.Drawing.Point(7, 251);
+            this.labeldataentrada.Name = "labeldataentrada";
+            this.labeldataentrada.Size = new System.Drawing.Size(28, 13);
+            this.labeldataentrada.TabIndex = 30;
+            this.labeldataentrada.Text = "Tipo";
+            // 
+            // labeldatasaida
+            // 
+            this.labeldatasaida.AutoSize = true;
+            this.labeldatasaida.Location = new System.Drawing.Point(7, 290);
+            this.labeldatasaida.Name = "labeldatasaida";
+            this.labeldatasaida.Size = new System.Drawing.Size(28, 13);
+            this.labeldatasaida.TabIndex = 29;
+            this.labeldatasaida.Text = "Tipo";
+            // 
+            // comboBoxtipo
+            // 
+            this.comboBoxtipo.FormattingEnabled = true;
+            this.comboBoxtipo.Items.AddRange(new object[] {
+            "Pneus",
+            "Rodas",
+            "Escape",
+            "Motor",
+            "Reparações",
+            "Limpeza"});
+            this.comboBoxtipo.Location = new System.Drawing.Point(10, 224);
+            this.comboBoxtipo.Name = "comboBoxtipo";
+            this.comboBoxtipo.Size = new System.Drawing.Size(147, 21);
+            this.comboBoxtipo.TabIndex = 27;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(45, 185);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(80, 13);
+            this.label13.TabIndex = 26;
+            this.label13.Text = "Criar Serviço";
+            // 
             // listBoxServicos
             // 
             this.listBoxServicos.FormattingEnabled = true;
@@ -237,6 +296,7 @@
             this.listBoxServicos.Name = "listBoxServicos";
             this.listBoxServicos.Size = new System.Drawing.Size(147, 134);
             this.listBoxServicos.TabIndex = 15;
+            this.listBoxServicos.SelectedIndexChanged += new System.EventHandler(this.listBoxServicos_SelectedIndexChanged);
             // 
             // buttonRemoverServicos
             // 
@@ -256,6 +316,7 @@
             this.buttonAdicionarServico.TabIndex = 11;
             this.buttonAdicionarServico.Text = "Adicionar Serviço";
             this.buttonAdicionarServico.UseVisualStyleBackColor = true;
+            this.buttonAdicionarServico.Click += new System.EventHandler(this.buttonAdicionarServico_Click);
             // 
             // label6
             // 
@@ -265,7 +326,6 @@
             this.label6.Size = new System.Drawing.Size(28, 13);
             this.label6.TabIndex = 5;
             this.label6.Text = "Tipo";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // groupBox2
             // 
@@ -454,63 +514,6 @@
             this.listBoxClientes.Size = new System.Drawing.Size(158, 498);
             this.listBoxClientes.TabIndex = 15;
             this.listBoxClientes.SelectedIndexChanged += new System.EventHandler(this.listBoxClientes_SelectedIndexChanged);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(45, 185);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(80, 13);
-            this.label13.TabIndex = 26;
-            this.label13.Text = "Criar Serviço";
-            // 
-            // comboBoxtipo
-            // 
-            this.comboBoxtipo.FormattingEnabled = true;
-            this.comboBoxtipo.Items.AddRange(new object[] {
-            "Pneus",
-            "Rodas",
-            "Escape",
-            "Motor",
-            "Reparações",
-            "Limpeza"});
-            this.comboBoxtipo.Location = new System.Drawing.Point(10, 224);
-            this.comboBoxtipo.Name = "comboBoxtipo";
-            this.comboBoxtipo.Size = new System.Drawing.Size(147, 21);
-            this.comboBoxtipo.TabIndex = 27;
-            // 
-            // labeldatasaida
-            // 
-            this.labeldatasaida.AutoSize = true;
-            this.labeldatasaida.Location = new System.Drawing.Point(7, 290);
-            this.labeldatasaida.Name = "labeldatasaida";
-            this.labeldatasaida.Size = new System.Drawing.Size(28, 13);
-            this.labeldatasaida.TabIndex = 29;
-            this.labeldatasaida.Text = "Tipo";
-            // 
-            // labeldataentrada
-            // 
-            this.labeldataentrada.AutoSize = true;
-            this.labeldataentrada.Location = new System.Drawing.Point(7, 251);
-            this.labeldataentrada.Name = "labeldataentrada";
-            this.labeldataentrada.Size = new System.Drawing.Size(28, 13);
-            this.labeldataentrada.TabIndex = 30;
-            this.labeldataentrada.Text = "Tipo";
-            // 
-            // dateTimePickerEntrada
-            // 
-            this.dateTimePickerEntrada.Location = new System.Drawing.Point(10, 268);
-            this.dateTimePickerEntrada.Name = "dateTimePickerEntrada";
-            this.dateTimePickerEntrada.Size = new System.Drawing.Size(146, 20);
-            this.dateTimePickerEntrada.TabIndex = 31;
-            // 
-            // dateTimePickerSaida
-            // 
-            this.dateTimePickerSaida.Location = new System.Drawing.Point(10, 306);
-            this.dateTimePickerSaida.Name = "dateTimePickerSaida";
-            this.dateTimePickerSaida.Size = new System.Drawing.Size(146, 20);
-            this.dateTimePickerSaida.TabIndex = 32;
             // 
             // FormGO
             // 

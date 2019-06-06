@@ -37,9 +37,6 @@ namespace AutoStand
             this.Close();
         }
 
-        private void clienteDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+      
     }
 }

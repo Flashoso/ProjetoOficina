@@ -14,6 +14,10 @@ namespace AutoStand
             DataSaida = dataSaida;
             Tipo = tipo;
         }
+        public override string ToString()
+        {
+            return Tipo ;
+        }
 
     }
 }

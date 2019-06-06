@@ -42,7 +42,8 @@ namespace AutoStand
 
         private void listBoxCarros_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            CarroOficina carroSelecionado = (CarroOficina)listBoxCarros.SelectedItem;
+            listBoxServicos.DataSource = carroSelecionado.Servico.ToList();
         }
 
         private void buttonAdicionarCarro_Click(object sender, EventArgs e)
@@ -58,9 +59,41 @@ namespace AutoStand
             listBoxCarros.DataSource = clienteSelecionado.CarroOficina.ToList();
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void listBoxServicos_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Servico servicoselelecionardo = (Servico)listBoxServicos.SelectedItem;
+            listBoxParcelas.DataSource = servicoselelecionardo.Parcelas.ToList();
+        }
 
+        private void buttonAdicionarServico_Click(object sender, EventArgs e)
+        {
+            CarroOficina carroSelecionado = (CarroOficina)listBoxCarros.SelectedItem;
+
+            Servico servico = new Servico(dateTimePickerEntrada.Value.ToString(), dateTimePickerSaida.Value.ToString(), comboBoxtipo.SelectedItem.ToString());
+
+            carroSelecionado.Servico.Add(servico);
+
+            AutoStand.SaveChanges();
+
+            listBoxServicos.DataSource = carroSelecionado.Servico.ToList();
+        }
+
+        private void listBoxParcelas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void buttonAdicionarParcela_Click(object sender, EventArgs e)
+        {
+            Servico servicoSelecionado = (Servico)listBoxServicos.SelectedItem;
+
+            Parcela parcela = new Parcela(textBoxValor.Text, textBoxDescricao.Text);
+
+            servicoSelecionado.Parcelas.Add(parcela);
+
+            AutoStand.SaveChanges();
+
+            listBoxParcelas.DataSource = servicoSelecionado.Parcelas.ToList();
         }
     }
 }

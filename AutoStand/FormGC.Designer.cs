@@ -265,7 +265,6 @@
             this.clienteDataGridView.Name = "clienteDataGridView";
             this.clienteDataGridView.Size = new System.Drawing.Size(439, 220);
             this.clienteDataGridView.TabIndex = 1;
-            this.clienteDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.clienteDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
