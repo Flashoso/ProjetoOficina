@@ -14,5 +14,6 @@ namespace AutoStand
             DataSaida = dataSaida;
             Tipo = tipo;
         }
+
     }
 }

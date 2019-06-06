@@ -14,5 +14,9 @@ namespace AutoStand
             Matricula = matricula;
             Kms = kms;
         }
+        public override string ToString()
+        {
+            return Matricula;
+        }
     }
 }

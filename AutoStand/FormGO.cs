@@ -36,6 +36,31 @@ namespace AutoStand
 
             textBoxMostrarNome.Text = clienteSelecionado.Nome;
             textBoxContacto.Text = clienteSelecionado.Contacto;
+
+            listBoxCarros.DataSource = clienteSelecionado.CarroOficina.ToList();
+        }
+
+        private void listBoxCarros_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void buttonAdicionarCarro_Click(object sender, EventArgs e)
+        {
+            Cliente clienteSelecionado = (Cliente)listBoxClientes.SelectedItem;
+
+            CarroOficina carroOficina = new CarroOficina(textBoxnumerochassi.Text, textBoxmarca.Text, textBoxmodelo.Text, textBoxcombustivel.Text, textBoxMatricula.Text, textBoxkms.Text);
+
+            clienteSelecionado.CarroOficina.Add(carroOficina);
+
+            AutoStand.SaveChanges();
+
+            listBoxCarros.DataSource = clienteSelecionado.CarroOficina.ToList();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
