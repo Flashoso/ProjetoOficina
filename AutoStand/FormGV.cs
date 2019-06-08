@@ -23,13 +23,6 @@ namespace AutoStand
         {
             listBoxClientes.DataSource = AutoStand.Clientes.ToList<Cliente>();
         }
-
-        private void FormGO_Load(object sender, EventArgs e)
-        {
-            AutoStand = new Model1Container();
-            LerDados();
-        }
-
         private void listBoxClientes_SelectedIndexChanged(object sender, EventArgs e)
         {
             Cliente clienteSelecionado = (Cliente)listBoxClientes.SelectedItem;
@@ -37,7 +30,13 @@ namespace AutoStand
             textBoxMostrarNome.Text = clienteSelecionado.Nome;
             textBoxContacto.Text = clienteSelecionado.Contacto;
 
-            listBoxCarros.DataSource = clienteSelecionado.CarroOficina.ToList();
+           
+        }
+
+        private void FormGV_Load(object sender, EventArgs e)
+        {
+            AutoStand = new Model1Container();
+            LerDados();
         }
     }
 }

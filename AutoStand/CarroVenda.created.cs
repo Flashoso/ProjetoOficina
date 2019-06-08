@@ -8,19 +8,9 @@ namespace AutoStand
 {
     public partial class CarroVenda
     {
-        public CarroVenda(string extras, string matricula, string numeroChassis, string marca, string modelo, string combustivel) : base(numeroChassis, matricula, marca, modelo, combustivel)
+        public CarroVenda(string extras)
         {
             Extras = extras;
-        }
-
-        public CarroVenda()
-        {
-
-        }
-
-        public override string ToString()
-        {
-            return Extras;
         }
     }
 }

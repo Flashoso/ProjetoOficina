@@ -347,6 +347,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormGV";
             this.Text = "FormGV";
+            this.Load += new System.EventHandler(this.FormGV_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
