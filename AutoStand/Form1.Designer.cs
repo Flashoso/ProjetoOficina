@@ -65,6 +65,7 @@
             this.labelGA.Size = new System.Drawing.Size(95, 13);
             this.labelGA.TabIndex = 2;
             this.labelGA.Text = "Gestão de Aluguer";
+            this.labelGA.Click += new System.EventHandler(this.labelGA_Click);
             // 
             // labelGV
             // 
@@ -74,6 +75,7 @@
             this.labelGV.Size = new System.Drawing.Size(95, 13);
             this.labelGV.TabIndex = 3;
             this.labelGV.Text = "Gestão de Vendas";
+            this.labelGV.Click += new System.EventHandler(this.labelGV_Click);
             // 
             // buttonGC
             // 
@@ -103,6 +105,7 @@
             this.buttonGA.Size = new System.Drawing.Size(151, 138);
             this.buttonGA.TabIndex = 6;
             this.buttonGA.UseVisualStyleBackColor = true;
+            this.buttonGA.Click += new System.EventHandler(this.buttonGA_Click);
             // 
             // buttonGV
             // 
@@ -112,6 +115,7 @@
             this.buttonGV.Size = new System.Drawing.Size(151, 138);
             this.buttonGV.TabIndex = 7;
             this.buttonGV.UseVisualStyleBackColor = true;
+            this.buttonGV.Click += new System.EventHandler(this.buttonGV_Click);
             // 
             // Form1
             // 

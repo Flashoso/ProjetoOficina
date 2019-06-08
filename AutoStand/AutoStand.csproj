@@ -80,6 +80,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormGA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGA.Designer.cs">
+      <DependentUpon>FormGA.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormGC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,12 @@
     </Compile>
     <Compile Include="FormGO.Designer.cs">
       <DependentUpon>FormGO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGV.Designer.cs">
+      <DependentUpon>FormGV.cs</DependentUpon>
     </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>

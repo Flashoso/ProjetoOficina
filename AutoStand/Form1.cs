@@ -28,5 +28,29 @@ namespace AutoStand
             new FormGO().Show();
             this.Hide();
         }
+
+        private void labelGA_Click(object sender, EventArgs e)
+        {
+            new FormGA().Show();
+            this.Hide();
+        }
+
+        private void buttonGA_Click(object sender, EventArgs e)
+        {
+            new FormGA().Show();
+            this.Hide();
+        }
+
+        private void labelGV_Click(object sender, EventArgs e)
+        {
+            new FormGV().Show();
+            this.Hide();
+        }
+
+        private void buttonGV_Click(object sender, EventArgs e)
+        {
+            new FormGV().Show();
+            this.Hide();
+        }
     }
 }
