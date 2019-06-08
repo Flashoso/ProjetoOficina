@@ -12,9 +12,32 @@ namespace AutoStand
 {
     public partial class FormGV : Form
     {
+        private Model1Container AutoStand;
+
         public FormGV()
         {
             InitializeComponent();
+        }
+
+        private void LerDados()
+        {
+            listBoxClientes.DataSource = AutoStand.Clientes.ToList<Cliente>();
+        }
+
+        private void FormGO_Load(object sender, EventArgs e)
+        {
+            AutoStand = new Model1Container();
+            LerDados();
+        }
+
+        private void listBoxClientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Cliente clienteSelecionado = (Cliente)listBoxClientes.SelectedItem;
+
+            textBoxMostrarNome.Text = clienteSelecionado.Nome;
+            textBoxContacto.Text = clienteSelecionado.Contacto;
+
+            listBoxCarros.DataSource = clienteSelecionado.CarroOficina.ToList();
         }
     }
 }

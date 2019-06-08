@@ -73,6 +73,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonRemoverClientes = new System.Windows.Forms.Button();
             this.listBoxClientes = new System.Windows.Forms.ListBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -88,7 +89,7 @@
             this.groupBox5.Controls.Add(this.label3);
             this.groupBox5.Controls.Add(this.label2);
             this.groupBox5.Controls.Add(this.label1);
-            this.groupBox5.Location = new System.Drawing.Point(250, 12);
+            this.groupBox5.Location = new System.Drawing.Point(248, 50);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(652, 93);
             this.groupBox5.TabIndex = 7;
@@ -155,7 +156,7 @@
             this.groupBox4.Controls.Add(this.buttonAdicionarParcela);
             this.groupBox4.Controls.Add(this.textBoxDescricao);
             this.groupBox4.Controls.Add(this.label7);
-            this.groupBox4.Location = new System.Drawing.Point(649, 111);
+            this.groupBox4.Location = new System.Drawing.Point(647, 149);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(259, 291);
             this.groupBox4.TabIndex = 4;
@@ -225,7 +226,7 @@
             this.groupBox3.Controls.Add(this.buttonRemoverServicos);
             this.groupBox3.Controls.Add(this.buttonAdicionarServico);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Location = new System.Drawing.Point(465, 111);
+            this.groupBox3.Location = new System.Drawing.Point(463, 149);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(167, 366);
             this.groupBox3.TabIndex = 5;
@@ -345,7 +346,7 @@
             this.groupBox2.Controls.Add(this.buttonAdicionarCarro);
             this.groupBox2.Controls.Add(this.textBoxMatricula);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(250, 111);
+            this.groupBox2.Location = new System.Drawing.Point(248, 149);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(209, 496);
             this.groupBox2.TabIndex = 6;
@@ -490,7 +491,7 @@
             // 
             this.groupBox1.Controls.Add(this.buttonRemoverClientes);
             this.groupBox1.Controls.Add(this.listBoxClientes);
-            this.groupBox1.Location = new System.Drawing.Point(36, 12);
+            this.groupBox1.Location = new System.Drawing.Point(34, 50);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(192, 566);
             this.groupBox1.TabIndex = 3;
@@ -515,11 +516,22 @@
             this.listBoxClientes.TabIndex = 15;
             this.listBoxClientes.SelectedIndexChanged += new System.EventHandler(this.listBoxClientes_SelectedIndexChanged);
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(486, 18);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(154, 20);
+            this.label14.TabIndex = 18;
+            this.label14.Text = "Gestão de Oficina";
+            // 
             // FormGO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1072, 619);
+            this.ClientSize = new System.Drawing.Size(1072, 652);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -538,6 +550,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -588,5 +601,6 @@
         private System.Windows.Forms.Label labeldataentrada;
         private System.Windows.Forms.Label labeldatasaida;
         private System.Windows.Forms.ComboBox comboBoxtipo;
+        private System.Windows.Forms.Label label14;
     }
 }

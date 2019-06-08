@@ -8,12 +8,13 @@ namespace AutoStand
 {
     public partial class Carro
     {
-        public Carro(string numeroChassis, string marca, string modelo, string combustivel)
+        public Carro(string numeroChassis, string marca, string modelo, string combustivel, string matricula)
         {
             NumeroChassis = numeroChassis;
             Marca = marca;
             Modelo = modelo;
             Combustivel = combustivel;
+            Matricula = matricula;
         }
         public Carro()
         {

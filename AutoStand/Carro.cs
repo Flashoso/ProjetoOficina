@@ -19,5 +19,6 @@ namespace AutoStand
         public string Marca { get; set; }
         public string Modelo { get; set; }
         public string Combustivel { get; set; }
+        public string Matricula { get; }
     }
 }

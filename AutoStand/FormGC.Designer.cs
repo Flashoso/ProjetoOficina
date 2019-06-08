@@ -62,6 +62,7 @@
             this.moradaTextBox = new System.Windows.Forms.TextBox();
             this.nifTextBox = new System.Windows.Forms.TextBox();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             contactoLabel = new System.Windows.Forms.Label();
             moradaLabel = new System.Windows.Forms.Label();
             nifLabel = new System.Windows.Forms.Label();
@@ -75,7 +76,7 @@
             // contactoLabel
             // 
             contactoLabel.AutoSize = true;
-            contactoLabel.Location = new System.Drawing.Point(524, 126);
+            contactoLabel.Location = new System.Drawing.Point(511, 263);
             contactoLabel.Name = "contactoLabel";
             contactoLabel.Size = new System.Drawing.Size(53, 13);
             contactoLabel.TabIndex = 2;
@@ -84,7 +85,7 @@
             // moradaLabel
             // 
             moradaLabel.AutoSize = true;
-            moradaLabel.Location = new System.Drawing.Point(524, 152);
+            moradaLabel.Location = new System.Drawing.Point(511, 212);
             moradaLabel.Name = "moradaLabel";
             moradaLabel.Size = new System.Drawing.Size(46, 13);
             moradaLabel.TabIndex = 6;
@@ -93,7 +94,7 @@
             // nifLabel
             // 
             nifLabel.AutoSize = true;
-            nifLabel.Location = new System.Drawing.Point(524, 178);
+            nifLabel.Location = new System.Drawing.Point(511, 163);
             nifLabel.Name = "nifLabel";
             nifLabel.Size = new System.Drawing.Size(23, 13);
             nifLabel.TabIndex = 8;
@@ -102,7 +103,7 @@
             // nomeLabel
             // 
             nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(524, 204);
+            nomeLabel.Location = new System.Drawing.Point(511, 119);
             nomeLabel.Name = "nomeLabel";
             nomeLabel.Size = new System.Drawing.Size(38, 13);
             nomeLabel.TabIndex = 10;
@@ -135,7 +136,7 @@
             this.clienteBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.clienteBindingNavigator.Name = "clienteBindingNavigator";
             this.clienteBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.clienteBindingNavigator.Size = new System.Drawing.Size(800, 25);
+            this.clienteBindingNavigator.Size = new System.Drawing.Size(742, 25);
             this.clienteBindingNavigator.TabIndex = 0;
             this.clienteBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -261,9 +262,9 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.clienteDataGridView.DataSource = this.clienteBindingSource;
-            this.clienteDataGridView.Location = new System.Drawing.Point(39, 76);
+            this.clienteDataGridView.Location = new System.Drawing.Point(23, 102);
             this.clienteDataGridView.Name = "clienteDataGridView";
-            this.clienteDataGridView.Size = new System.Drawing.Size(439, 220);
+            this.clienteDataGridView.Size = new System.Drawing.Size(439, 194);
             this.clienteDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -321,7 +322,7 @@
             // contactoTextBox
             // 
             this.contactoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Contacto", true));
-            this.contactoTextBox.Location = new System.Drawing.Point(584, 123);
+            this.contactoTextBox.Location = new System.Drawing.Point(571, 260);
             this.contactoTextBox.Name = "contactoTextBox";
             this.contactoTextBox.Size = new System.Drawing.Size(100, 20);
             this.contactoTextBox.TabIndex = 3;
@@ -329,7 +330,7 @@
             // moradaTextBox
             // 
             this.moradaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Morada", true));
-            this.moradaTextBox.Location = new System.Drawing.Point(584, 149);
+            this.moradaTextBox.Location = new System.Drawing.Point(571, 209);
             this.moradaTextBox.Name = "moradaTextBox";
             this.moradaTextBox.Size = new System.Drawing.Size(100, 20);
             this.moradaTextBox.TabIndex = 7;
@@ -337,7 +338,7 @@
             // nifTextBox
             // 
             this.nifTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Nif", true));
-            this.nifTextBox.Location = new System.Drawing.Point(584, 175);
+            this.nifTextBox.Location = new System.Drawing.Point(571, 160);
             this.nifTextBox.Name = "nifTextBox";
             this.nifTextBox.Size = new System.Drawing.Size(100, 20);
             this.nifTextBox.TabIndex = 9;
@@ -345,16 +346,27 @@
             // nomeTextBox
             // 
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Nome", true));
-            this.nomeTextBox.Location = new System.Drawing.Point(584, 201);
+            this.nomeTextBox.Location = new System.Drawing.Point(571, 116);
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(100, 20);
             this.nomeTextBox.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(319, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(163, 20);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Gestão de Clientes";
             // 
             // FormGC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(742, 389);
+            this.Controls.Add(this.label1);
             this.Controls.Add(contactoLabel);
             this.Controls.Add(this.contactoTextBox);
             this.Controls.Add(moradaLabel);
@@ -407,5 +419,6 @@
         private System.Windows.Forms.TextBox nifTextBox;
         private System.Windows.Forms.TextBox nomeTextBox;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.Label label1;
     }
 }
