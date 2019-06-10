@@ -27,10 +27,11 @@ namespace AutoStand
         {
             Cliente clienteSelecionado = (Cliente)listBoxClientes.SelectedItem;
 
-            textBoxMostrarNome.Text = clienteSelecionado.Nome;
-            textBoxContacto.Text = clienteSelecionado.Contacto;
+            listBoxExtras.DataSource = clienteSelecionado.Vendas.ToList();
 
-           
+            textBoxMostrarNome.Text = clienteSelecionado.Nome;
+
+
         }
 
         private void FormGV_Load(object sender, EventArgs e)
@@ -38,5 +39,7 @@ namespace AutoStand
             AutoStand = new Model1Container();
             LerDados();
         }
+
+
     }
 }

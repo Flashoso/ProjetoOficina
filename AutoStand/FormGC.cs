@@ -37,6 +37,9 @@ namespace AutoStand
             this.Close();
         }
 
-      
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

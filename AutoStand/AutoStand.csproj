@@ -130,6 +130,7 @@
     <Compile Include="Servico.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Venda.created.cs" />
     <Compile Include="Venda.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
