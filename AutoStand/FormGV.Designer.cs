@@ -33,8 +33,8 @@
             this.listBoxClientes = new System.Windows.Forms.ListBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.labelTotalGastopreco = new System.Windows.Forms.Label();
-            this.textBoxContacto = new System.Windows.Forms.TextBox();
-            this.textBoxMostrarNome = new System.Windows.Forms.TextBox();
+            this.textBoxnif = new System.Windows.Forms.TextBox();
+            this.textBoxnome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -53,10 +53,17 @@
             this.label6 = new System.Windows.Forms.Label();
             this.listBoxCarros = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBoxValor = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBoxEstado = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.buttonAdicionarExtra = new System.Windows.Forms.Button();
             this.textBoxExtra = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.listBoxExtras = new System.Windows.Forms.ListBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.dateTimePickerData = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -95,8 +102,8 @@
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.labelTotalGastopreco);
-            this.groupBox5.Controls.Add(this.textBoxContacto);
-            this.groupBox5.Controls.Add(this.textBoxMostrarNome);
+            this.groupBox5.Controls.Add(this.textBoxnif);
+            this.groupBox5.Controls.Add(this.textBoxnome);
             this.groupBox5.Controls.Add(this.label3);
             this.groupBox5.Controls.Add(this.label2);
             this.groupBox5.Controls.Add(this.label4);
@@ -117,19 +124,19 @@
             this.labelTotalGastopreco.TabIndex = 17;
             this.labelTotalGastopreco.Text = "00.00€";
             // 
-            // textBoxContacto
+            // textBoxnif
             // 
-            this.textBoxContacto.Location = new System.Drawing.Point(74, 55);
-            this.textBoxContacto.Name = "textBoxContacto";
-            this.textBoxContacto.Size = new System.Drawing.Size(186, 20);
-            this.textBoxContacto.TabIndex = 16;
+            this.textBoxnif.Location = new System.Drawing.Point(74, 55);
+            this.textBoxnif.Name = "textBoxnif";
+            this.textBoxnif.Size = new System.Drawing.Size(186, 20);
+            this.textBoxnif.TabIndex = 16;
             // 
-            // textBoxMostrarNome
+            // textBoxnome
             // 
-            this.textBoxMostrarNome.Location = new System.Drawing.Point(74, 25);
-            this.textBoxMostrarNome.Name = "textBoxMostrarNome";
-            this.textBoxMostrarNome.Size = new System.Drawing.Size(186, 20);
-            this.textBoxMostrarNome.TabIndex = 12;
+            this.textBoxnome.Location = new System.Drawing.Point(74, 25);
+            this.textBoxnome.Name = "textBoxnome";
+            this.textBoxnome.Size = new System.Drawing.Size(186, 20);
+            this.textBoxnome.TabIndex = 12;
             // 
             // label3
             // 
@@ -144,11 +151,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 58);
+            this.label2.Location = new System.Drawing.Point(48, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.Size = new System.Drawing.Size(23, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Contacto:";
+            this.label2.Text = "Nif:";
             // 
             // label4
             // 
@@ -263,6 +270,7 @@
             this.buttonAdicionarCarro.TabIndex = 28;
             this.buttonAdicionarCarro.Text = "Adicionar Carro";
             this.buttonAdicionarCarro.UseVisualStyleBackColor = true;
+            this.buttonAdicionarCarro.Click += new System.EventHandler(this.buttonAdicionarCarro_Click);
             // 
             // textBoxMatricula
             // 
@@ -290,6 +298,13 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.dateTimePickerData);
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Controls.Add(this.textBoxValor);
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.textBoxEstado);
+            this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.buttonAdicionarExtra);
             this.groupBox3.Controls.Add(this.textBoxExtra);
             this.groupBox3.Controls.Add(this.label7);
@@ -301,6 +316,47 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Extras";
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(22, 328);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(31, 13);
+            this.label14.TabIndex = 43;
+            this.label14.Text = "Valor";
+            // 
+            // textBoxValor
+            // 
+            this.textBoxValor.Location = new System.Drawing.Point(24, 344);
+            this.textBoxValor.Name = "textBoxValor";
+            this.textBoxValor.Size = new System.Drawing.Size(214, 20);
+            this.textBoxValor.TabIndex = 44;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(21, 227);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(40, 13);
+            this.label13.TabIndex = 41;
+            this.label13.Text = "Estado";
+            // 
+            // textBoxEstado
+            // 
+            this.textBoxEstado.Location = new System.Drawing.Point(25, 243);
+            this.textBoxEstado.Name = "textBoxEstado";
+            this.textBoxEstado.Size = new System.Drawing.Size(214, 20);
+            this.textBoxEstado.TabIndex = 42;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(22, 171);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(41, 13);
+            this.label11.TabIndex = 40;
+            this.label11.Text = "Extra/s";
+            // 
             // buttonAdicionarExtra
             // 
             this.buttonAdicionarExtra.Location = new System.Drawing.Point(25, 379);
@@ -309,10 +365,11 @@
             this.buttonAdicionarExtra.TabIndex = 40;
             this.buttonAdicionarExtra.Text = "Adicionar Extra";
             this.buttonAdicionarExtra.UseVisualStyleBackColor = true;
+            this.buttonAdicionarExtra.Click += new System.EventHandler(this.buttonAdicionarExtra_Click);
             // 
             // textBoxExtra
             // 
-            this.textBoxExtra.Location = new System.Drawing.Point(25, 344);
+            this.textBoxExtra.Location = new System.Drawing.Point(25, 187);
             this.textBoxExtra.Name = "textBoxExtra";
             this.textBoxExtra.Size = new System.Drawing.Size(214, 20);
             this.textBoxExtra.TabIndex = 40;
@@ -321,19 +378,35 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(78, 312);
+            this.label7.Location = new System.Drawing.Point(83, 150);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 13);
+            this.label7.Size = new System.Drawing.Size(100, 13);
             this.label7.TabIndex = 40;
-            this.label7.Text = "Adicionar Extra/s";
+            this.label7.Text = "Adicionar Venda";
             // 
             // listBoxExtras
             // 
             this.listBoxExtras.FormattingEnabled = true;
             this.listBoxExtras.Location = new System.Drawing.Point(25, 19);
             this.listBoxExtras.Name = "listBoxExtras";
-            this.listBoxExtras.Size = new System.Drawing.Size(214, 277);
+            this.listBoxExtras.Size = new System.Drawing.Size(214, 108);
             this.listBoxExtras.TabIndex = 40;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(23, 273);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(30, 13);
+            this.label15.TabIndex = 45;
+            this.label15.Text = "Data";
+            // 
+            // dateTimePickerData
+            // 
+            this.dateTimePickerData.Location = new System.Drawing.Point(24, 289);
+            this.dateTimePickerData.Name = "dateTimePickerData";
+            this.dateTimePickerData.Size = new System.Drawing.Size(213, 20);
+            this.dateTimePickerData.TabIndex = 46;
             // 
             // FormGV
             // 
@@ -366,8 +439,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label labelTotalGastopreco;
-        private System.Windows.Forms.TextBox textBoxContacto;
-        private System.Windows.Forms.TextBox textBoxMostrarNome;
+        private System.Windows.Forms.TextBox textBoxnif;
+        private System.Windows.Forms.TextBox textBoxnome;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
@@ -391,5 +464,12 @@
         private System.Windows.Forms.TextBox textBoxExtra;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ListBox listBoxExtras;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBoxValor;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textBoxEstado;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DateTimePicker dateTimePickerData;
+        private System.Windows.Forms.Label label15;
     }
 }

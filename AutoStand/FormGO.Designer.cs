@@ -30,8 +30,8 @@
         {
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.labelTotalGastopreco = new System.Windows.Forms.Label();
-            this.textBoxContacto = new System.Windows.Forms.TextBox();
-            this.textBoxMostrarNome = new System.Windows.Forms.TextBox();
+            this.textBoxnif = new System.Windows.Forms.TextBox();
+            this.textBoxnome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -84,8 +84,8 @@
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.labelTotalGastopreco);
-            this.groupBox5.Controls.Add(this.textBoxContacto);
-            this.groupBox5.Controls.Add(this.textBoxMostrarNome);
+            this.groupBox5.Controls.Add(this.textBoxnif);
+            this.groupBox5.Controls.Add(this.textBoxnome);
             this.groupBox5.Controls.Add(this.label3);
             this.groupBox5.Controls.Add(this.label2);
             this.groupBox5.Controls.Add(this.label1);
@@ -106,19 +106,19 @@
             this.labelTotalGastopreco.TabIndex = 17;
             this.labelTotalGastopreco.Text = "00.00€";
             // 
-            // textBoxContacto
+            // textBoxnif
             // 
-            this.textBoxContacto.Location = new System.Drawing.Point(74, 55);
-            this.textBoxContacto.Name = "textBoxContacto";
-            this.textBoxContacto.Size = new System.Drawing.Size(186, 20);
-            this.textBoxContacto.TabIndex = 16;
+            this.textBoxnif.Location = new System.Drawing.Point(74, 55);
+            this.textBoxnif.Name = "textBoxnif";
+            this.textBoxnif.Size = new System.Drawing.Size(186, 20);
+            this.textBoxnif.TabIndex = 16;
             // 
-            // textBoxMostrarNome
+            // textBoxnome
             // 
-            this.textBoxMostrarNome.Location = new System.Drawing.Point(74, 25);
-            this.textBoxMostrarNome.Name = "textBoxMostrarNome";
-            this.textBoxMostrarNome.Size = new System.Drawing.Size(186, 20);
-            this.textBoxMostrarNome.TabIndex = 12;
+            this.textBoxnome.Location = new System.Drawing.Point(74, 25);
+            this.textBoxnome.Name = "textBoxnome";
+            this.textBoxnome.Size = new System.Drawing.Size(186, 20);
+            this.textBoxnome.TabIndex = 12;
             // 
             // label3
             // 
@@ -133,11 +133,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 58);
+            this.label2.Location = new System.Drawing.Point(45, 59);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.Size = new System.Drawing.Size(23, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Contacto:";
+            this.label2.Text = "Nif:";
             // 
             // label1
             // 
@@ -252,18 +252,18 @@
             this.labeldataentrada.AutoSize = true;
             this.labeldataentrada.Location = new System.Drawing.Point(7, 251);
             this.labeldataentrada.Name = "labeldataentrada";
-            this.labeldataentrada.Size = new System.Drawing.Size(28, 13);
+            this.labeldataentrada.Size = new System.Drawing.Size(44, 13);
             this.labeldataentrada.TabIndex = 30;
-            this.labeldataentrada.Text = "Tipo";
+            this.labeldataentrada.Text = "Entrada";
             // 
             // labeldatasaida
             // 
             this.labeldatasaida.AutoSize = true;
             this.labeldatasaida.Location = new System.Drawing.Point(7, 290);
             this.labeldatasaida.Name = "labeldatasaida";
-            this.labeldatasaida.Size = new System.Drawing.Size(28, 13);
+            this.labeldatasaida.Size = new System.Drawing.Size(34, 13);
             this.labeldatasaida.TabIndex = 29;
-            this.labeldatasaida.Text = "Tipo";
+            this.labeldatasaida.Text = "Saida";
             // 
             // comboBoxtipo
             // 
@@ -558,8 +558,8 @@
 
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label labelTotalGastopreco;
-        private System.Windows.Forms.TextBox textBoxContacto;
-        private System.Windows.Forms.TextBox textBoxMostrarNome;
+        private System.Windows.Forms.TextBox textBoxnif;
+        private System.Windows.Forms.TextBox textBoxnome;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

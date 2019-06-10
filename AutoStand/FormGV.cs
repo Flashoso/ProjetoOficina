@@ -29,7 +29,8 @@ namespace AutoStand
 
             listBoxExtras.DataSource = clienteSelecionado.Vendas.ToList();
 
-            textBoxMostrarNome.Text = clienteSelecionado.Nome;
+            textBoxnome.Text = clienteSelecionado.Nome;
+            textBoxnif.Text = clienteSelecionado.Nif;
 
 
         }
@@ -41,5 +42,24 @@ namespace AutoStand
         }
 
 
+        private void buttonAdicionarCarro_Click(object sender, EventArgs e)
+        {
+            CarroVenda carroVenda = new CarroVenda(textBoxnumerochassi.Text, textBoxmarca.Text, textBoxmodelo.Text, textBoxcombustivel.Text);
+
+            AutoStand.Carros.Add(carroVenda);
+
+            AutoStand.SaveChanges();
+        }
+
+        private void buttonAdicionarExtra_Click(object sender, EventArgs e)
+        {
+            Venda venda = new Venda(textBoxValor.Text, textBoxEstado.Text, dateTimePickerData.Value.ToString());
+
+            venda.CarroVenda = carro;
+            cliente.Vendas.Add(venda);
+
+            minhaOficina.SaveChanges();
+            MessageBox.Show("Alteracões Guardadas");
+        }
     }
 }
