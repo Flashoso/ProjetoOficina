@@ -137,6 +137,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormGA.resx">
+      <DependentUpon>FormGA.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormGC.resx">
       <DependentUpon>FormGC.cs</DependentUpon>
     </EmbeddedResource>

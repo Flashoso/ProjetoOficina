@@ -88,9 +88,13 @@ namespace AutoStand
         {
             Servico servico = new Servico(dateTimePickerEntrada.Value.ToString(), dateTimePickerSaida.Value.ToString(), comboBoxtipo.SelectedItem.ToString());
 
-            carro.Servicos.Add(servico);
+            CarroOficina carroSelecionado = (CarroOficina)listBoxCarros.SelectedItem;
+            carroSelecionado.Servico.Add(servico);
 
             AutoStand.SaveChanges();
+
+            listBoxServicos.DataSource = carroSelecionado.Servico.ToList();
+
         }
 
 

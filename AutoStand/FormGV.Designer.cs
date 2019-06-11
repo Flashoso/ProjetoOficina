@@ -53,6 +53,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.listBoxCarros = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dateTimePickerData = new System.Windows.Forms.DateTimePicker();
+            this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.textBoxValor = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -62,8 +64,6 @@
             this.textBoxExtra = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.listBoxExtras = new System.Windows.Forms.ListBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.dateTimePickerData = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -174,8 +174,10 @@
             this.groupBox2.Controls.Add(this.textBoxcombustivel);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.textBoxmarca);
             this.groupBox2.Controls.Add(this.textBoxmodelo);
+            this.groupBox2.Controls.Add(this.textBoxExtra);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.buttonAdicionarCarro);
             this.groupBox2.Controls.Add(this.textBoxMatricula);
@@ -192,7 +194,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(71, 150);
+            this.label12.Location = new System.Drawing.Point(72, 127);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(67, 13);
             this.label12.TabIndex = 39;
@@ -200,7 +202,7 @@
             // 
             // textBoxnumerochassi
             // 
-            this.textBoxnumerochassi.Location = new System.Drawing.Point(18, 305);
+            this.textBoxnumerochassi.Location = new System.Drawing.Point(19, 282);
             this.textBoxnumerochassi.Name = "textBoxnumerochassi";
             this.textBoxnumerochassi.Size = new System.Drawing.Size(185, 20);
             this.textBoxnumerochassi.TabIndex = 32;
@@ -208,7 +210,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 289);
+            this.label5.Location = new System.Drawing.Point(16, 266);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 13);
             this.label5.TabIndex = 29;
@@ -216,7 +218,7 @@
             // 
             // textBoxcombustivel
             // 
-            this.textBoxcombustivel.Location = new System.Drawing.Point(18, 344);
+            this.textBoxcombustivel.Location = new System.Drawing.Point(19, 321);
             this.textBoxcombustivel.Name = "textBoxcombustivel";
             this.textBoxcombustivel.Size = new System.Drawing.Size(185, 20);
             this.textBoxcombustivel.TabIndex = 37;
@@ -224,7 +226,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(15, 328);
+            this.label10.Location = new System.Drawing.Point(16, 305);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(66, 13);
             this.label10.TabIndex = 35;
@@ -233,7 +235,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(15, 250);
+            this.label9.Location = new System.Drawing.Point(16, 227);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(42, 13);
             this.label9.TabIndex = 34;
@@ -241,14 +243,14 @@
             // 
             // textBoxmarca
             // 
-            this.textBoxmarca.Location = new System.Drawing.Point(18, 226);
+            this.textBoxmarca.Location = new System.Drawing.Point(19, 203);
             this.textBoxmarca.Name = "textBoxmarca";
             this.textBoxmarca.Size = new System.Drawing.Size(185, 20);
             this.textBoxmarca.TabIndex = 33;
             // 
             // textBoxmodelo
             // 
-            this.textBoxmodelo.Location = new System.Drawing.Point(18, 266);
+            this.textBoxmodelo.Location = new System.Drawing.Point(19, 243);
             this.textBoxmodelo.Name = "textBoxmodelo";
             this.textBoxmodelo.Size = new System.Drawing.Size(185, 20);
             this.textBoxmodelo.TabIndex = 31;
@@ -256,7 +258,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(18, 210);
+            this.label8.Location = new System.Drawing.Point(19, 187);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(37, 13);
             this.label8.TabIndex = 30;
@@ -274,7 +276,7 @@
             // 
             // textBoxMatricula
             // 
-            this.textBoxMatricula.Location = new System.Drawing.Point(18, 187);
+            this.textBoxMatricula.Location = new System.Drawing.Point(19, 164);
             this.textBoxMatricula.Name = "textBoxMatricula";
             this.textBoxMatricula.Size = new System.Drawing.Size(185, 20);
             this.textBoxMatricula.TabIndex = 27;
@@ -282,7 +284,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 171);
+            this.label6.Location = new System.Drawing.Point(16, 148);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 13);
             this.label6.TabIndex = 26;
@@ -304,9 +306,7 @@
             this.groupBox3.Controls.Add(this.textBoxValor);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.textBoxEstado);
-            this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.buttonAdicionarExtra);
-            this.groupBox3.Controls.Add(this.textBoxExtra);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.listBoxExtras);
             this.groupBox3.Location = new System.Drawing.Point(462, 157);
@@ -315,6 +315,22 @@
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Extras";
+            // 
+            // dateTimePickerData
+            // 
+            this.dateTimePickerData.Location = new System.Drawing.Point(24, 289);
+            this.dateTimePickerData.Name = "dateTimePickerData";
+            this.dateTimePickerData.Size = new System.Drawing.Size(213, 20);
+            this.dateTimePickerData.TabIndex = 46;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(23, 273);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(30, 13);
+            this.label15.TabIndex = 45;
+            this.label15.Text = "Data";
             // 
             // label14
             // 
@@ -351,7 +367,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(22, 171);
+            this.label11.Location = new System.Drawing.Point(19, 344);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(41, 13);
             this.label11.TabIndex = 40;
@@ -369,9 +385,9 @@
             // 
             // textBoxExtra
             // 
-            this.textBoxExtra.Location = new System.Drawing.Point(25, 187);
+            this.textBoxExtra.Location = new System.Drawing.Point(19, 353);
             this.textBoxExtra.Name = "textBoxExtra";
-            this.textBoxExtra.Size = new System.Drawing.Size(214, 20);
+            this.textBoxExtra.Size = new System.Drawing.Size(184, 20);
             this.textBoxExtra.TabIndex = 40;
             // 
             // label7
@@ -391,22 +407,6 @@
             this.listBoxExtras.Name = "listBoxExtras";
             this.listBoxExtras.Size = new System.Drawing.Size(214, 108);
             this.listBoxExtras.TabIndex = 40;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(23, 273);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(30, 13);
-            this.label15.TabIndex = 45;
-            this.label15.Text = "Data";
-            // 
-            // dateTimePickerData
-            // 
-            this.dateTimePickerData.Location = new System.Drawing.Point(24, 289);
-            this.dateTimePickerData.Name = "dateTimePickerData";
-            this.dateTimePickerData.Size = new System.Drawing.Size(213, 20);
-            this.dateTimePickerData.TabIndex = 46;
             // 
             // FormGV
             // 

@@ -44,7 +44,7 @@ namespace AutoStand
 
         private void buttonAdicionarCarro_Click(object sender, EventArgs e)
         {
-            CarroVenda carroVenda = new CarroVenda(textBoxnumerochassi.Text, textBoxmarca.Text, textBoxmodelo.Text, textBoxcombustivel.Text);
+            CarroVenda carroVenda = new CarroVenda(textBoxExtra.Text, textBoxnumerochassi.Text, textBoxmarca.Text, textBoxmodelo.Text, textBoxcombustivel.Text);
 
             AutoStand.Carros.Add(carroVenda);
 
@@ -55,10 +55,9 @@ namespace AutoStand
         {
             Venda venda = new Venda(textBoxValor.Text, textBoxEstado.Text, dateTimePickerData.Value.ToString());
 
-            venda.CarroVenda = carro;
-            cliente.Vendas.Add(venda);
+            AutoStand.Vendas.Add(venda);
 
-            minhaOficina.SaveChanges();
+            AutoStand.SaveChanges();
             MessageBox.Show("Alteracões Guardadas");
         }
     }

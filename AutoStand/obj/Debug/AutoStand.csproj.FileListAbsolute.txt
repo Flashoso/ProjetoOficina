@@ -33,3 +33,4 @@ C:\Users\Flashoso\Desktop\ProjetoOficina\AutoStand\obj\Debug\AutoStand.csproj.Co
 C:\Users\Flashoso\Desktop\ProjetoOficina\AutoStand\obj\Debug\AutoStand.exe
 C:\Users\Flashoso\Desktop\ProjetoOficina\AutoStand\obj\Debug\AutoStand.pdb
 C:\Users\Flashoso\Desktop\ProjetoOficina\AutoStand\obj\Debug\AutoStand.FormGV.resources
+C:\Users\Flashoso\Desktop\ProjetoOficina\AutoStand\obj\Debug\AutoStand.FormGA.resources
