@@ -16,7 +16,7 @@ namespace AutoStand
         {
             InitializeComponent();
         }
-
+        //Hiperligação do menu
         private void buttonGC_Click(object sender, EventArgs e)
         {
             new FormGC().Show();

@@ -25,15 +25,14 @@ namespace AutoStand
             listBoxCarros.DataSource = AutoStand.Carros.ToList();
 
         }
+
+                                //listar Clientes e ficha 
         private void listBoxClientes_SelectedIndexChanged(object sender, EventArgs e)
         {
             Cliente clienteSelecionado = (Cliente)listBoxClientes.SelectedItem;
 
-            listBoxExtras.DataSource = clienteSelecionado.Vendas.ToList();
-
             textBoxnome.Text = clienteSelecionado.Nome;
             textBoxnif.Text = clienteSelecionado.Nif;
-
 
         }
 
@@ -44,7 +43,7 @@ namespace AutoStand
             
         }
 
-
+                                //Adicionar Carro
         private void buttonAdicionarCarro_Click(object sender, EventArgs e)
         {
             CarroVenda carroVenda = new CarroVenda(textBoxExtra.Text, textBoxnumerochassi.Text, textBoxmarca.Text, textBoxmodelo.Text, textBoxcombustivel.Text);
@@ -54,6 +53,7 @@ namespace AutoStand
             AutoStand.SaveChanges();
         }
 
+                                 //Adicionar Carro
         private void buttonAdicionarExtra_Click(object sender, EventArgs e)
         {
             Cliente clienteSelecionado = (Cliente)listBoxClientes.SelectedItem;
@@ -65,7 +65,8 @@ namespace AutoStand
 
             AutoStand.SaveChanges();
         }
-
+                    
+                                    //Botão Voltar
         private void Voltar_Click(object sender, EventArgs e)
         {
             new Form1().Show();

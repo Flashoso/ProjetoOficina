@@ -29,17 +29,15 @@ namespace AutoStand
             AutoStand = new Model1Container();
             LerDados();
         }
-
+                                       //listar Clientes e ficha
         private void listBoxClientes_SelectedIndexChanged(object sender, EventArgs e)
         {
             Cliente clienteSelecionado = (Cliente)listBoxClientes.SelectedItem;
 
             textBoxnome.Text = clienteSelecionado.Nome;
-            textBoxnif.Text = clienteSelecionado.Contacto;
-
-            listBoxCarros.DataSource = clienteSelecionado.CarroOficina.ToList();
+            textBoxnif.Text = clienteSelecionado.Nif;
         }
-
+                                        //Carros
         private void listBoxCarros_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -89,16 +87,9 @@ namespace AutoStand
             catch
             {
                 return;
-            }
-            
-
-            
-
-            
-
-            
+            }  
         }
-
+                                      //Serviços
         private void listBoxServicos_SelectedIndexChanged(object sender, EventArgs e)
         {
             Servico servicoselelecionardo = (Servico)listBoxServicos.SelectedItem;
@@ -119,7 +110,7 @@ namespace AutoStand
 
         }
 
-
+                                    //Parcelas
         private void buttonAdicionarParcela_Click(object sender, EventArgs e)
         {
             Servico servicoSelecionado = (Servico)listBoxServicos.SelectedItem;
@@ -137,13 +128,13 @@ namespace AutoStand
         {
             Parcela parcelaSelecionado = (Parcela)listBoxParcelas.SelectedItem;
         }
-
+                                    //Botão Voltar
         private void Voltar_Click(object sender, EventArgs e)
         {
             new Form1().Show();
             this.Hide();
         }
-
+                                    //Remover Carro
         private void buttonRemoverCarros_Click(object sender, EventArgs e)
         {
             CarroOficina carroSelecionado = (CarroOficina)listBoxCarros.SelectedItem;
@@ -158,7 +149,7 @@ namespace AutoStand
             Cliente clienteSelecionado = (Cliente)listBoxClientes.SelectedItem;
             listBoxCarros.DataSource = clienteSelecionado.CarroOficina.ToList();
         }
-
+                                    //Remover Serviço
         private void buttonRemoverServicos_Click(object sender, EventArgs e)
         {
             Servico servicoselecionado = (Servico)listBoxServicos.SelectedItem;
@@ -173,7 +164,7 @@ namespace AutoStand
             CarroOficina carroselecionado = (CarroOficina)listBoxCarros.SelectedItem;
             listBoxServicos.DataSource = carroselecionado.Servico.ToList();
         }
-
+                                    //Remover Parcela
         private void buttonRemoverParcelas_Click(object sender, EventArgs e)
         {
             Parcela parcelaselecionado = (Parcela)listBoxParcelas.SelectedItem;

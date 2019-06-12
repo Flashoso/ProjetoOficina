@@ -69,7 +69,6 @@
             this.textBoxMatricula = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.buttonRemoverClientes = new System.Windows.Forms.Button();
             this.listBoxClientes = new System.Windows.Forms.ListBox();
             this.label14 = new System.Windows.Forms.Label();
             this.Voltar = new System.Windows.Forms.Label();
@@ -145,6 +144,7 @@
             this.listBoxParcelas.FormattingEnabled = true;
             this.listBoxParcelas.Location = new System.Drawing.Point(9, 48);
             this.listBoxParcelas.Name = "listBoxParcelas";
+            this.listBoxParcelas.ScrollAlwaysVisible = true;
             this.listBoxParcelas.Size = new System.Drawing.Size(244, 134);
             this.listBoxParcelas.TabIndex = 16;
             this.listBoxParcelas.SelectedIndexChanged += new System.EventHandler(this.listBoxParcelas_SelectedIndexChanged);
@@ -273,6 +273,7 @@
             this.listBoxServicos.FormattingEnabled = true;
             this.listBoxServicos.Location = new System.Drawing.Point(9, 48);
             this.listBoxServicos.Name = "listBoxServicos";
+            this.listBoxServicos.ScrollAlwaysVisible = true;
             this.listBoxServicos.Size = new System.Drawing.Size(147, 134);
             this.listBoxServicos.TabIndex = 15;
             this.listBoxServicos.SelectedIndexChanged += new System.EventHandler(this.listBoxServicos_SelectedIndexChanged);
@@ -427,6 +428,7 @@
             this.listBoxCarros.FormattingEnabled = true;
             this.listBoxCarros.Location = new System.Drawing.Point(18, 48);
             this.listBoxCarros.Name = "listBoxCarros";
+            this.listBoxCarros.ScrollAlwaysVisible = true;
             this.listBoxCarros.Size = new System.Drawing.Size(185, 134);
             this.listBoxCarros.TabIndex = 14;
             this.listBoxCarros.SelectedIndexChanged += new System.EventHandler(this.listBoxCarros_SelectedIndexChanged);
@@ -469,7 +471,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.buttonRemoverClientes);
             this.groupBox1.Controls.Add(this.listBoxClientes);
             this.groupBox1.Location = new System.Drawing.Point(34, 50);
             this.groupBox1.Name = "groupBox1";
@@ -478,21 +479,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lista de Clientes";
             // 
-            // buttonRemoverClientes
-            // 
-            this.buttonRemoverClientes.Location = new System.Drawing.Point(13, 16);
-            this.buttonRemoverClientes.Name = "buttonRemoverClientes";
-            this.buttonRemoverClientes.Size = new System.Drawing.Size(158, 23);
-            this.buttonRemoverClientes.TabIndex = 15;
-            this.buttonRemoverClientes.Text = "Remover";
-            this.buttonRemoverClientes.UseVisualStyleBackColor = true;
-            // 
             // listBoxClientes
             // 
             this.listBoxClientes.FormattingEnabled = true;
-            this.listBoxClientes.Location = new System.Drawing.Point(13, 45);
+            this.listBoxClientes.Location = new System.Drawing.Point(13, 32);
             this.listBoxClientes.Name = "listBoxClientes";
-            this.listBoxClientes.Size = new System.Drawing.Size(158, 498);
+            this.listBoxClientes.ScrollAlwaysVisible = true;
+            this.listBoxClientes.Size = new System.Drawing.Size(158, 511);
             this.listBoxClientes.TabIndex = 15;
             this.listBoxClientes.SelectedIndexChanged += new System.EventHandler(this.listBoxClientes_SelectedIndexChanged);
             // 
@@ -573,7 +566,6 @@
         private System.Windows.Forms.TextBox textBoxMatricula;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button buttonRemoverClientes;
         private System.Windows.Forms.ListBox listBoxClientes;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBoxkms;

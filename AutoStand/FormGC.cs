@@ -25,18 +25,18 @@ namespace AutoStand
              select cliente).Load();
             clienteBindingSource.DataSource = AutoStand.Clientes.Local.ToBindingList();
         }
-
+                                    //Botão Guardar
         private void clienteBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             AutoStand.SaveChanges();
         }
-
+                                    //Botão Voltar
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             new Form1().Show();
             this.Close();
         }
-
+                             //Adicionar Cliente verificação
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
             try

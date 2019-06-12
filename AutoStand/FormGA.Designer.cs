@@ -59,9 +59,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.listBoxAluguer = new System.Windows.Forms.ListBox();
             this.Voltar = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.textBoxnif = new System.Windows.Forms.TextBox();
+            this.textBoxnome = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -77,9 +83,9 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.listBoxClientes);
-            this.groupBox1.Location = new System.Drawing.Point(31, 89);
+            this.groupBox1.Location = new System.Drawing.Point(31, 74);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(192, 483);
+            this.groupBox1.Size = new System.Drawing.Size(192, 569);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lista de Clientes";
@@ -89,8 +95,10 @@
             this.listBoxClientes.FormattingEnabled = true;
             this.listBoxClientes.Location = new System.Drawing.Point(16, 28);
             this.listBoxClientes.Name = "listBoxClientes";
-            this.listBoxClientes.Size = new System.Drawing.Size(156, 433);
+            this.listBoxClientes.ScrollAlwaysVisible = true;
+            this.listBoxClientes.Size = new System.Drawing.Size(156, 524);
             this.listBoxClientes.TabIndex = 16;
+            this.listBoxClientes.SelectedIndexChanged += new System.EventHandler(this.listBoxClientes_SelectedIndexChanged);
             // 
             // groupBox2
             // 
@@ -109,7 +117,7 @@
             this.groupBox2.Controls.Add(this.textBoxMatricula);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.listBoxCarros);
-            this.groupBox2.Location = new System.Drawing.Point(257, 89);
+            this.groupBox2.Location = new System.Drawing.Point(257, 160);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(210, 483);
             this.groupBox2.TabIndex = 3;
@@ -237,6 +245,7 @@
             this.listBoxCarros.FormattingEnabled = true;
             this.listBoxCarros.Location = new System.Drawing.Point(21, 21);
             this.listBoxCarros.Name = "listBoxCarros";
+            this.listBoxCarros.ScrollAlwaysVisible = true;
             this.listBoxCarros.Size = new System.Drawing.Size(173, 147);
             this.listBoxCarros.TabIndex = 15;
             // 
@@ -252,7 +261,7 @@
             this.groupBox3.Controls.Add(this.textBoxKms);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.listBoxAluguer);
-            this.groupBox3.Location = new System.Drawing.Point(495, 89);
+            this.groupBox3.Location = new System.Drawing.Point(495, 160);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(200, 483);
             this.groupBox3.TabIndex = 4;
@@ -338,6 +347,7 @@
             this.listBoxAluguer.FormattingEnabled = true;
             this.listBoxAluguer.Location = new System.Drawing.Point(19, 23);
             this.listBoxAluguer.Name = "listBoxAluguer";
+            this.listBoxAluguer.ScrollAlwaysVisible = true;
             this.listBoxAluguer.Size = new System.Drawing.Size(161, 251);
             this.listBoxAluguer.TabIndex = 0;
             // 
@@ -353,11 +363,57 @@
             this.Voltar.Text = "Voltar";
             this.Voltar.Click += new System.EventHandler(this.Voltar_Click);
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.textBoxnif);
+            this.groupBox5.Controls.Add(this.textBoxnome);
+            this.groupBox5.Controls.Add(this.label13);
+            this.groupBox5.Controls.Add(this.label14);
+            this.groupBox5.Location = new System.Drawing.Point(245, 74);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(382, 80);
+            this.groupBox5.TabIndex = 11;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Ficha ";
+            // 
+            // textBoxnif
+            // 
+            this.textBoxnif.Location = new System.Drawing.Point(70, 49);
+            this.textBoxnif.Name = "textBoxnif";
+            this.textBoxnif.Size = new System.Drawing.Size(266, 20);
+            this.textBoxnif.TabIndex = 16;
+            // 
+            // textBoxnome
+            // 
+            this.textBoxnome.Location = new System.Drawing.Point(70, 19);
+            this.textBoxnome.Name = "textBoxnome";
+            this.textBoxnome.Size = new System.Drawing.Size(266, 20);
+            this.textBoxnome.TabIndex = 12;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(41, 52);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(23, 13);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Nif:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(29, 22);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(38, 13);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Nome:";
+            // 
             // FormGA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(717, 600);
+            this.ClientSize = new System.Drawing.Size(717, 666);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.Voltar);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -371,6 +427,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -409,5 +467,10 @@
         private System.Windows.Forms.TextBox textBoxEstado;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label Voltar;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TextBox textBoxnif;
+        private System.Windows.Forms.TextBox textBoxnome;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
     }
 }

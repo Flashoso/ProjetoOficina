@@ -31,7 +31,7 @@ namespace AutoStand
             LerDados();
             
         }
-
+                                            //Adicionar Carro
         private void buttonAdicionarCarro_Click(object sender, EventArgs e)
         {
             CarroAluguer carroAluguer = new CarroAluguer(textBoxnumerochassi.Text, textBoxmarca.Text, textBoxmodelo.Text, textBoxcombustivel.Text, textBoxEstado.Text, textBoxMatricula.Text );
@@ -43,6 +43,7 @@ namespace AutoStand
             listBoxCarros.DataSource = AutoStand.Carros.ToList();
         }
 
+                                            //Adicionar Aluguer
         private void button1_Click(object sender, EventArgs e)
         {
             Cliente clienteSelecionado = (Cliente)listBoxClientes.SelectedItem;
@@ -55,11 +56,20 @@ namespace AutoStand
             AutoStand.SaveChanges();
         }
 
+                                            //Botão Voltar
         private void Voltar_Click(object sender, EventArgs e)
         {
             new Form1().Show();
             this.Hide();
         }
 
+                                            //Listar Clientes e Ficha
+        private void listBoxClientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Cliente clienteSelecionado = (Cliente)listBoxClientes.SelectedItem;
+
+            textBoxnome.Text = clienteSelecionado.Nome;
+            textBoxnif.Text = clienteSelecionado.Nif;
+        }
     }
 }

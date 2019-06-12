@@ -94,6 +94,7 @@
             this.listBoxClientes.FormattingEnabled = true;
             this.listBoxClientes.Location = new System.Drawing.Point(16, 28);
             this.listBoxClientes.Name = "listBoxClientes";
+            this.listBoxClientes.ScrollAlwaysVisible = true;
             this.listBoxClientes.Size = new System.Drawing.Size(156, 459);
             this.listBoxClientes.TabIndex = 16;
             this.listBoxClientes.SelectedIndexChanged += new System.EventHandler(this.listBoxClientes_SelectedIndexChanged);
@@ -288,7 +289,8 @@
             this.listBoxCarros.FormattingEnabled = true;
             this.listBoxCarros.Location = new System.Drawing.Point(21, 19);
             this.listBoxCarros.Name = "listBoxCarros";
-            this.listBoxCarros.Size = new System.Drawing.Size(173, 121);
+            this.listBoxCarros.ScrollAlwaysVisible = true;
+            this.listBoxCarros.Size = new System.Drawing.Size(173, 95);
             this.listBoxCarros.TabIndex = 15;
             // 
             // groupBox3
@@ -311,7 +313,7 @@
             // 
             // dateTimePickerData
             // 
-            this.dateTimePickerData.Location = new System.Drawing.Point(24, 289);
+            this.dateTimePickerData.Location = new System.Drawing.Point(25, 243);
             this.dateTimePickerData.Name = "dateTimePickerData";
             this.dateTimePickerData.Size = new System.Drawing.Size(213, 20);
             this.dateTimePickerData.TabIndex = 46;
@@ -319,7 +321,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(23, 273);
+            this.label15.Location = new System.Drawing.Point(24, 227);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(30, 13);
             this.label15.TabIndex = 45;
@@ -328,7 +330,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(22, 328);
+            this.label14.Location = new System.Drawing.Point(23, 282);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(31, 13);
             this.label14.TabIndex = 43;
@@ -336,7 +338,7 @@
             // 
             // textBoxValor
             // 
-            this.textBoxValor.Location = new System.Drawing.Point(24, 344);
+            this.textBoxValor.Location = new System.Drawing.Point(25, 298);
             this.textBoxValor.Name = "textBoxValor";
             this.textBoxValor.Size = new System.Drawing.Size(214, 20);
             this.textBoxValor.TabIndex = 44;
@@ -344,7 +346,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(21, 227);
+            this.label13.Location = new System.Drawing.Point(22, 181);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(40, 13);
             this.label13.TabIndex = 41;
@@ -352,7 +354,7 @@
             // 
             // textBoxEstado
             // 
-            this.textBoxEstado.Location = new System.Drawing.Point(25, 243);
+            this.textBoxEstado.Location = new System.Drawing.Point(26, 197);
             this.textBoxEstado.Name = "textBoxEstado";
             this.textBoxEstado.Size = new System.Drawing.Size(214, 20);
             this.textBoxEstado.TabIndex = 42;
@@ -380,8 +382,9 @@
             // listBoxExtras
             // 
             this.listBoxExtras.FormattingEnabled = true;
-            this.listBoxExtras.Location = new System.Drawing.Point(25, 19);
+            this.listBoxExtras.Location = new System.Drawing.Point(24, 19);
             this.listBoxExtras.Name = "listBoxExtras";
+            this.listBoxExtras.ScrollAlwaysVisible = true;
             this.listBoxExtras.Size = new System.Drawing.Size(214, 108);
             this.listBoxExtras.TabIndex = 40;
             // 
