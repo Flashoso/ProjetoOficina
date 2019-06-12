@@ -32,10 +32,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listBoxClientes = new System.Windows.Forms.ListBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.labelTotalGastopreco = new System.Windows.Forms.Label();
             this.textBoxnif = new System.Windows.Forms.TextBox();
             this.textBoxnome = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -45,8 +43,10 @@
             this.textBoxcombustivel = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.textBoxmarca = new System.Windows.Forms.TextBox();
             this.textBoxmodelo = new System.Windows.Forms.TextBox();
+            this.textBoxExtra = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.buttonAdicionarCarro = new System.Windows.Forms.Button();
             this.textBoxMatricula = new System.Windows.Forms.TextBox();
@@ -59,11 +59,10 @@
             this.textBoxValor = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.textBoxEstado = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.buttonAdicionarExtra = new System.Windows.Forms.Button();
-            this.textBoxExtra = new System.Windows.Forms.TextBox();
+            this.buttonAdicionarVenda = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.listBoxExtras = new System.Windows.Forms.ListBox();
+            this.Voltar = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -101,52 +100,30 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.labelTotalGastopreco);
             this.groupBox5.Controls.Add(this.textBoxnif);
             this.groupBox5.Controls.Add(this.textBoxnome);
-            this.groupBox5.Controls.Add(this.label3);
             this.groupBox5.Controls.Add(this.label2);
             this.groupBox5.Controls.Add(this.label4);
             this.groupBox5.Location = new System.Drawing.Point(232, 57);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(488, 94);
+            this.groupBox5.Size = new System.Drawing.Size(323, 94);
             this.groupBox5.TabIndex = 8;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Ficha ";
-            // 
-            // labelTotalGastopreco
-            // 
-            this.labelTotalGastopreco.AutoSize = true;
-            this.labelTotalGastopreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotalGastopreco.Location = new System.Drawing.Point(361, 52);
-            this.labelTotalGastopreco.Name = "labelTotalGastopreco";
-            this.labelTotalGastopreco.Size = new System.Drawing.Size(52, 18);
-            this.labelTotalGastopreco.TabIndex = 17;
-            this.labelTotalGastopreco.Text = "00.00€";
             // 
             // textBoxnif
             // 
             this.textBoxnif.Location = new System.Drawing.Point(74, 55);
             this.textBoxnif.Name = "textBoxnif";
-            this.textBoxnif.Size = new System.Drawing.Size(186, 20);
+            this.textBoxnif.Size = new System.Drawing.Size(217, 20);
             this.textBoxnif.TabIndex = 16;
             // 
             // textBoxnome
             // 
             this.textBoxnome.Location = new System.Drawing.Point(74, 25);
             this.textBoxnome.Name = "textBoxnome";
-            this.textBoxnome.Size = new System.Drawing.Size(186, 20);
+            this.textBoxnome.Size = new System.Drawing.Size(217, 20);
             this.textBoxnome.TabIndex = 12;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(361, 26);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Total Gasto:";
             // 
             // label2
             // 
@@ -241,6 +218,15 @@
             this.label9.TabIndex = 34;
             this.label9.Text = "Modelo";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(19, 344);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(41, 13);
+            this.label11.TabIndex = 40;
+            this.label11.Text = "Extra/s";
+            // 
             // textBoxmarca
             // 
             this.textBoxmarca.Location = new System.Drawing.Point(19, 203);
@@ -254,6 +240,13 @@
             this.textBoxmodelo.Name = "textBoxmodelo";
             this.textBoxmodelo.Size = new System.Drawing.Size(185, 20);
             this.textBoxmodelo.TabIndex = 31;
+            // 
+            // textBoxExtra
+            // 
+            this.textBoxExtra.Location = new System.Drawing.Point(19, 353);
+            this.textBoxExtra.Name = "textBoxExtra";
+            this.textBoxExtra.Size = new System.Drawing.Size(184, 20);
+            this.textBoxExtra.TabIndex = 40;
             // 
             // label8
             // 
@@ -306,7 +299,7 @@
             this.groupBox3.Controls.Add(this.textBoxValor);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.textBoxEstado);
-            this.groupBox3.Controls.Add(this.buttonAdicionarExtra);
+            this.groupBox3.Controls.Add(this.buttonAdicionarVenda);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.listBoxExtras);
             this.groupBox3.Location = new System.Drawing.Point(462, 157);
@@ -364,31 +357,15 @@
             this.textBoxEstado.Size = new System.Drawing.Size(214, 20);
             this.textBoxEstado.TabIndex = 42;
             // 
-            // label11
+            // buttonAdicionarVenda
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(19, 344);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 13);
-            this.label11.TabIndex = 40;
-            this.label11.Text = "Extra/s";
-            // 
-            // buttonAdicionarExtra
-            // 
-            this.buttonAdicionarExtra.Location = new System.Drawing.Point(25, 379);
-            this.buttonAdicionarExtra.Name = "buttonAdicionarExtra";
-            this.buttonAdicionarExtra.Size = new System.Drawing.Size(214, 23);
-            this.buttonAdicionarExtra.TabIndex = 40;
-            this.buttonAdicionarExtra.Text = "Adicionar Extra";
-            this.buttonAdicionarExtra.UseVisualStyleBackColor = true;
-            this.buttonAdicionarExtra.Click += new System.EventHandler(this.buttonAdicionarExtra_Click);
-            // 
-            // textBoxExtra
-            // 
-            this.textBoxExtra.Location = new System.Drawing.Point(19, 353);
-            this.textBoxExtra.Name = "textBoxExtra";
-            this.textBoxExtra.Size = new System.Drawing.Size(184, 20);
-            this.textBoxExtra.TabIndex = 40;
+            this.buttonAdicionarVenda.Location = new System.Drawing.Point(25, 379);
+            this.buttonAdicionarVenda.Name = "buttonAdicionarVenda";
+            this.buttonAdicionarVenda.Size = new System.Drawing.Size(214, 23);
+            this.buttonAdicionarVenda.TabIndex = 40;
+            this.buttonAdicionarVenda.Text = "Adicionar Venda";
+            this.buttonAdicionarVenda.UseVisualStyleBackColor = true;
+            this.buttonAdicionarVenda.Click += new System.EventHandler(this.buttonAdicionarExtra_Click);
             // 
             // label7
             // 
@@ -408,11 +385,24 @@
             this.listBoxExtras.Size = new System.Drawing.Size(214, 108);
             this.listBoxExtras.TabIndex = 40;
             // 
+            // Voltar
+            // 
+            this.Voltar.AutoSize = true;
+            this.Voltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Voltar.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.Voltar.Location = new System.Drawing.Point(628, 20);
+            this.Voltar.Name = "Voltar";
+            this.Voltar.Size = new System.Drawing.Size(57, 20);
+            this.Voltar.TabIndex = 9;
+            this.Voltar.Text = "Voltar";
+            this.Voltar.Click += new System.EventHandler(this.Voltar_Click);
+            // 
             // FormGV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(745, 586);
+            this.Controls.Add(this.Voltar);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox5);
@@ -438,10 +428,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label labelTotalGastopreco;
         private System.Windows.Forms.TextBox textBoxnif;
         private System.Windows.Forms.TextBox textBoxnome;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -460,7 +448,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxnumerochassi;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button buttonAdicionarExtra;
+        private System.Windows.Forms.Button buttonAdicionarVenda;
         private System.Windows.Forms.TextBox textBoxExtra;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ListBox listBoxExtras;
@@ -471,5 +459,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker dateTimePickerData;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label Voltar;
     }
 }

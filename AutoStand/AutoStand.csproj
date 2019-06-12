@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aluguer.created.cs" />
     <Compile Include="Aluguer.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -60,6 +61,7 @@
     <Compile Include="Carro.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="CarroAluguer.created.cs" />
     <Compile Include="CarroAluguer.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

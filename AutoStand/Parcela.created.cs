@@ -19,7 +19,7 @@ namespace AutoStand
         }
         public override string ToString()
         {
-            return Valor + " (" +Descricao+ ")";
+            return Descricao + " (" +Valor+ "€)";
         }
     }
 }

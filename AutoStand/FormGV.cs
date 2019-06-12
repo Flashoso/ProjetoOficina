@@ -22,6 +22,8 @@ namespace AutoStand
         private void LerDados()
         {
             listBoxClientes.DataSource = AutoStand.Clientes.ToList<Cliente>();
+            listBoxCarros.DataSource = AutoStand.Carros.ToList();
+
         }
         private void listBoxClientes_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -39,6 +41,7 @@ namespace AutoStand
         {
             AutoStand = new Model1Container();
             LerDados();
+            
         }
 
 
@@ -53,12 +56,20 @@ namespace AutoStand
 
         private void buttonAdicionarExtra_Click(object sender, EventArgs e)
         {
-            Venda venda = new Venda(textBoxValor.Text, textBoxEstado.Text, dateTimePickerData.Value.ToString());
+            Cliente clienteSelecionado = (Cliente)listBoxClientes.SelectedItem;
+            CarroVenda carroSelecionado = (CarroVenda)listBoxCarros.SelectedItem;
+            Venda venda = new Venda(dateTimePickerData.Value.ToString(), textBoxEstado.Text, textBoxValor.Text);
 
-            AutoStand.Vendas.Add(venda);
+            venda.CarroVenda = carroSelecionado;
+            clienteSelecionado.Vendas.Add(venda);
 
             AutoStand.SaveChanges();
-            MessageBox.Show("Alteracões Guardadas");
+        }
+
+        private void Voltar_Click(object sender, EventArgs e)
+        {
+            new Form1().Show();
+            this.Hide();
         }
     }
 }

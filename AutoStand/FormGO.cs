@@ -70,11 +70,33 @@ namespace AutoStand
 
             CarroOficina carroOficina = new CarroOficina(textBoxnumerochassi.Text, textBoxmarca.Text, textBoxmodelo.Text, textBoxcombustivel.Text, textBoxMatricula.Text, textBoxkms.Text);
 
-            clienteSelecionado.CarroOficina.Add(carroOficina);
-
-            AutoStand.SaveChanges();
-
             listBoxCarros.DataSource = clienteSelecionado.CarroOficina.ToList();
+
+            try
+            {
+                if (textBoxMatricula.Text.Length == 0 || textBoxnumerochassi.Text.Length == 0 || textBoxmarca.Text.Length == 0 || textBoxmodelo.Text.Length == 0 || textBoxcombustivel.Text.Length == 0 || textBoxkms.Text.Length == 0)
+                {
+                    MessageBox.Show("Preencha todos os campos.");
+                }
+                
+                else
+                {
+                    clienteSelecionado.CarroOficina.Add(carroOficina);
+                    MessageBox.Show("Carro adicionado");
+                    AutoStand.SaveChanges();
+                }
+            }
+            catch
+            {
+                return;
+            }
+            
+
+            
+
+            
+
+            
         }
 
         private void listBoxServicos_SelectedIndexChanged(object sender, EventArgs e)
@@ -116,5 +138,55 @@ namespace AutoStand
             Parcela parcelaSelecionado = (Parcela)listBoxParcelas.SelectedItem;
         }
 
+        private void Voltar_Click(object sender, EventArgs e)
+        {
+            new Form1().Show();
+            this.Hide();
+        }
+
+        private void buttonRemoverCarros_Click(object sender, EventArgs e)
+        {
+            CarroOficina carroSelecionado = (CarroOficina)listBoxCarros.SelectedItem;
+
+            if (carroSelecionado == null)
+                return;
+
+            AutoStand.Carros.Remove(carroSelecionado);
+
+            AutoStand.SaveChanges();
+
+            Cliente clienteSelecionado = (Cliente)listBoxClientes.SelectedItem;
+            listBoxCarros.DataSource = clienteSelecionado.CarroOficina.ToList();
+        }
+
+        private void buttonRemoverServicos_Click(object sender, EventArgs e)
+        {
+            Servico servicoselecionado = (Servico)listBoxServicos.SelectedItem;
+
+            if (servicoselecionado == null)
+                return;
+
+            AutoStand.Servicos.Remove(servicoselecionado);
+
+            AutoStand.SaveChanges();
+
+            CarroOficina carroselecionado = (CarroOficina)listBoxCarros.SelectedItem;
+            listBoxServicos.DataSource = carroselecionado.Servico.ToList();
+        }
+
+        private void buttonRemoverParcelas_Click(object sender, EventArgs e)
+        {
+            Parcela parcelaselecionado = (Parcela)listBoxParcelas.SelectedItem;
+
+            if (parcelaselecionado == null)
+                return;
+
+            AutoStand.Parcelas.Remove(parcelaselecionado);
+
+            AutoStand.SaveChanges();
+
+            Servico servicoselecionado = (Servico)listBoxServicos.SelectedItem;
+            listBoxParcelas.DataSource = servicoselecionado.Parcelas.ToList();
+        }
     }
 }

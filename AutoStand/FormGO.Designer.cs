@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.labelTotalGastopreco = new System.Windows.Forms.Label();
             this.textBoxnif = new System.Windows.Forms.TextBox();
             this.textBoxnome = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -74,6 +72,7 @@
             this.buttonRemoverClientes = new System.Windows.Forms.Button();
             this.listBoxClientes = new System.Windows.Forms.ListBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.Voltar = new System.Windows.Forms.Label();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -83,52 +82,30 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.labelTotalGastopreco);
             this.groupBox5.Controls.Add(this.textBoxnif);
             this.groupBox5.Controls.Add(this.textBoxnome);
-            this.groupBox5.Controls.Add(this.label3);
             this.groupBox5.Controls.Add(this.label2);
             this.groupBox5.Controls.Add(this.label1);
             this.groupBox5.Location = new System.Drawing.Point(248, 50);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(652, 93);
+            this.groupBox5.Size = new System.Drawing.Size(382, 93);
             this.groupBox5.TabIndex = 7;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Ficha ";
-            // 
-            // labelTotalGastopreco
-            // 
-            this.labelTotalGastopreco.AutoSize = true;
-            this.labelTotalGastopreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotalGastopreco.Location = new System.Drawing.Point(464, 54);
-            this.labelTotalGastopreco.Name = "labelTotalGastopreco";
-            this.labelTotalGastopreco.Size = new System.Drawing.Size(52, 18);
-            this.labelTotalGastopreco.TabIndex = 17;
-            this.labelTotalGastopreco.Text = "00.00€";
             // 
             // textBoxnif
             // 
             this.textBoxnif.Location = new System.Drawing.Point(74, 55);
             this.textBoxnif.Name = "textBoxnif";
-            this.textBoxnif.Size = new System.Drawing.Size(186, 20);
+            this.textBoxnif.Size = new System.Drawing.Size(266, 20);
             this.textBoxnif.TabIndex = 16;
             // 
             // textBoxnome
             // 
             this.textBoxnome.Location = new System.Drawing.Point(74, 25);
             this.textBoxnome.Name = "textBoxnome";
-            this.textBoxnome.Size = new System.Drawing.Size(186, 20);
+            this.textBoxnome.Size = new System.Drawing.Size(266, 20);
             this.textBoxnome.TabIndex = 12;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(464, 28);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Total Gasto:";
             // 
             // label2
             // 
@@ -187,6 +164,7 @@
             this.buttonRemoverParcelas.TabIndex = 15;
             this.buttonRemoverParcelas.Text = "Remover";
             this.buttonRemoverParcelas.UseVisualStyleBackColor = true;
+            this.buttonRemoverParcelas.Click += new System.EventHandler(this.buttonRemoverParcelas_Click);
             // 
             // buttonAdicionarParcela
             // 
@@ -308,6 +286,7 @@
             this.buttonRemoverServicos.TabIndex = 14;
             this.buttonRemoverServicos.Text = "Remover";
             this.buttonRemoverServicos.UseVisualStyleBackColor = true;
+            this.buttonRemoverServicos.Click += new System.EventHandler(this.buttonRemoverServicos_Click);
             // 
             // buttonAdicionarServico
             // 
@@ -460,6 +439,7 @@
             this.buttonRemoverCarros.TabIndex = 13;
             this.buttonRemoverCarros.Text = "Remover";
             this.buttonRemoverCarros.UseVisualStyleBackColor = true;
+            this.buttonRemoverCarros.Click += new System.EventHandler(this.buttonRemoverCarros_Click);
             // 
             // buttonAdicionarCarro
             // 
@@ -520,17 +500,30 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(486, 18);
+            this.label14.Location = new System.Drawing.Point(380, 18);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(154, 20);
             this.label14.TabIndex = 18;
             this.label14.Text = "Gestão de Oficina";
             // 
+            // Voltar
+            // 
+            this.Voltar.AutoSize = true;
+            this.Voltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Voltar.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.Voltar.Location = new System.Drawing.Point(773, 18);
+            this.Voltar.Name = "Voltar";
+            this.Voltar.Size = new System.Drawing.Size(57, 20);
+            this.Voltar.TabIndex = 19;
+            this.Voltar.Text = "Voltar";
+            this.Voltar.Click += new System.EventHandler(this.Voltar_Click);
+            // 
             // FormGO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1072, 652);
+            this.ClientSize = new System.Drawing.Size(932, 652);
+            this.Controls.Add(this.Voltar);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
@@ -557,10 +550,8 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label labelTotalGastopreco;
         private System.Windows.Forms.TextBox textBoxnif;
         private System.Windows.Forms.TextBox textBoxnome;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -602,5 +593,6 @@
         private System.Windows.Forms.Label labeldatasaida;
         private System.Windows.Forms.ComboBox comboBoxtipo;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label Voltar;
     }
 }

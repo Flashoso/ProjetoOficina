@@ -8,8 +8,7 @@ namespace AutoStand
 {
     public partial class CarroOficina
     {
-        public CarroOficina(string numeroChassis, string marca, string modelo, string combustivel,
-            string matricula, string kms) : base(numeroChassis, marca, modelo, combustivel)
+        public CarroOficina(string numeroChassis, string marca, string modelo, string combustivel, string matricula, string kms) : base(numeroChassis, marca, modelo, combustivel)
         {
             Matricula = matricula;
             Kms = kms;

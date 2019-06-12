@@ -37,5 +37,28 @@ namespace AutoStand
             this.Close();
         }
 
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (nomeTextBox.Text.Length == 0){
+                    MessageBox.Show("O campo Nome está vazio");
+                }
+                if (nifTextBox.Text.Length != 9){
+                    MessageBox.Show("O campo Nif tem de ter 9 dígitos");
+                }
+                if (contactoTextBox.Text.Length != 9){
+                    MessageBox.Show("O campo Contacto tem de ter 9 dígitos");
+                }
+                else{
+                    MessageBox.Show("Cliente adicionado");
+                }
+            }
+            catch
+            {
+                return;
+            }
+            
+        }
     }
 }

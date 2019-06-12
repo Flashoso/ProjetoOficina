@@ -12,9 +12,53 @@ namespace AutoStand
 {
     public partial class FormGA : Form
     {
+        private Model1Container AutoStand;
+
         public FormGA()
         {
             InitializeComponent();
+        }
+
+        private void LerDados()
+        {
+            listBoxClientes.DataSource = AutoStand.Clientes.ToList<Cliente>();
+            listBoxCarros.DataSource = AutoStand.Carros.ToList();
+        }
+
+        private void FormGA_Load(object sender, EventArgs e)
+        {
+            AutoStand = new Model1Container();
+            LerDados();
+            
+        }
+
+        private void buttonAdicionarCarro_Click(object sender, EventArgs e)
+        {
+            CarroAluguer carroAluguer = new CarroAluguer(textBoxnumerochassi.Text, textBoxmarca.Text, textBoxmodelo.Text, textBoxcombustivel.Text, textBoxEstado.Text, textBoxMatricula.Text );
+
+            AutoStand.Carros.Add(carroAluguer);
+
+            AutoStand.SaveChanges();
+
+            listBoxCarros.DataSource = AutoStand.Carros.ToList();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Cliente clienteSelecionado = (Cliente)listBoxClientes.SelectedItem;
+            CarroAluguer carroSelecionado = (CarroAluguer)listBoxCarros.SelectedItem;
+            Aluguer aluguer = new Aluguer(dateTimePickerEntrada.Value.ToString(), dateTimePickerSaida.Value.ToString(), textBoxvalor.Text, textBoxKms.Text);
+            
+            aluguer.CarroAluguer = carroSelecionado;
+            clienteSelecionado.Alugueres.Add(aluguer);
+
+            AutoStand.SaveChanges();
+        }
+
+        private void Voltar_Click(object sender, EventArgs e)
+        {
+            new Form1().Show();
+            this.Hide();
         }
 
     }
