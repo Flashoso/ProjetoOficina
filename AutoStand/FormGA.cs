@@ -52,7 +52,7 @@ namespace AutoStand
             
             aluguer.CarroAluguer = carroSelecionado;
             clienteSelecionado.Alugueres.Add(aluguer);
-
+            listBoxAluguer.DataSource = clienteSelecionado.Alugueres.ToList();
             AutoStand.SaveChanges();
         }
 

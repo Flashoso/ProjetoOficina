@@ -61,7 +61,7 @@
             this.textBoxEstado = new System.Windows.Forms.TextBox();
             this.buttonAdicionarVenda = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.listBoxExtras = new System.Windows.Forms.ListBox();
+            this.listboxVenda = new System.Windows.Forms.ListBox();
             this.Voltar = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -303,13 +303,13 @@
             this.groupBox3.Controls.Add(this.textBoxEstado);
             this.groupBox3.Controls.Add(this.buttonAdicionarVenda);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.listBoxExtras);
+            this.groupBox3.Controls.Add(this.listboxVenda);
             this.groupBox3.Location = new System.Drawing.Point(462, 157);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(258, 413);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Extras";
+            this.groupBox3.Text = "Venda";
             // 
             // dateTimePickerData
             // 
@@ -379,14 +379,14 @@
             this.label7.TabIndex = 40;
             this.label7.Text = "Adicionar Venda";
             // 
-            // listBoxExtras
+            // listboxVenda
             // 
-            this.listBoxExtras.FormattingEnabled = true;
-            this.listBoxExtras.Location = new System.Drawing.Point(24, 19);
-            this.listBoxExtras.Name = "listBoxExtras";
-            this.listBoxExtras.ScrollAlwaysVisible = true;
-            this.listBoxExtras.Size = new System.Drawing.Size(214, 108);
-            this.listBoxExtras.TabIndex = 40;
+            this.listboxVenda.FormattingEnabled = true;
+            this.listboxVenda.Location = new System.Drawing.Point(24, 19);
+            this.listboxVenda.Name = "listboxVenda";
+            this.listboxVenda.ScrollAlwaysVisible = true;
+            this.listboxVenda.Size = new System.Drawing.Size(214, 108);
+            this.listboxVenda.TabIndex = 40;
             // 
             // Voltar
             // 
@@ -454,7 +454,7 @@
         private System.Windows.Forms.Button buttonAdicionarVenda;
         private System.Windows.Forms.TextBox textBoxExtra;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ListBox listBoxExtras;
+        private System.Windows.Forms.ListBox listboxVenda;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBoxValor;
         private System.Windows.Forms.Label label13;

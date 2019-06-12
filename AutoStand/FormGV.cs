@@ -58,11 +58,11 @@ namespace AutoStand
         {
             Cliente clienteSelecionado = (Cliente)listBoxClientes.SelectedItem;
             CarroVenda carroSelecionado = (CarroVenda)listBoxCarros.SelectedItem;
-            Venda venda = new Venda(dateTimePickerData.Value.ToString(), textBoxEstado.Text, textBoxValor.Text);
+            Venda venda= new Venda(dateTimePickerData.Value.ToString(), textBoxEstado.Text, textBoxValor.Text);
 
             venda.CarroVenda = carroSelecionado;
             clienteSelecionado.Vendas.Add(venda);
-
+            listboxVenda.DataSource = clienteSelecionado.Vendas.ToList();
             AutoStand.SaveChanges();
         }
                     
@@ -72,5 +72,7 @@ namespace AutoStand
             new Form1().Show();
             this.Hide();
         }
+
+
     }
 }

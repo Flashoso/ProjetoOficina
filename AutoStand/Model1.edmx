@@ -592,7 +592,7 @@
     </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="00b5b7331d7d4797b3bed46a923651a4" Name="Diagram1" ZoomLevel="47">
+      <Diagram DiagramId="00b5b7331d7d4797b3bed46a923651a4" Name="Diagram1" ZoomLevel="139">
         <EntityTypeShape EntityType="Model1.Cliente" Width="1.5" PointX="1" PointY="7.125" IsExpanded="true" />
         <EntityTypeShape EntityType="Model1.Venda" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="Model1.Aluguer" Width="1.5" PointX="7.125" PointY="10.75" IsExpanded="true" />
